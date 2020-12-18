@@ -29,7 +29,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEditPhaseMeaning">
+   <widget class="QPlainTextEdit" name="plainTextEditMeaning">
     <property name="geometry">
      <rect>
       <x>290</x>

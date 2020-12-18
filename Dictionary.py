@@ -1,4 +1,5 @@
 import sys
+import time
 import sqlite3
 from sqlite3 import Error
 from PyQt5.QtWidgets import QMainWindow, QApplication
@@ -31,8 +32,25 @@ class MyForm(QMainWindow):
             conn.commit()
 
             # Check phase and Meaning
+            if len(self.ui.plainTextEditPhase.toPlainText()) == 0 or \
+                    len(self.ui.plainTextEditMeaning.toPlainText()) == 0:
+                self.ui.labelResponse.setText("Điền đủ thông tin đi chứ, babe!")
+            else:
+                # Add data to database
+                phase = "\'" + self.ui.plainTextEditPhase.toPlainText() + "\'"
+                meaning = "\'" + self.ui.plainTextEditMeaning.toPlainText() + "\'"
+                timestr = "\'" + str(time.time()) + "\'"
+                tableCommand = "INSERT INTO dictionary (phase, meaning, create_time) VALUES (" + \
+                               phase + "," + meaning + "," + timestr + ");"
+
+                print(tableCommand)
+                c = conn.cursor()
+                c.execute(tableCommand)
+                conn.commit()
+                # Respond text
+
         except Error as e:
-            print("Error while handling database")
+            print("Error while handling database: %s", str(e))
             pass
         finally:
             conn.close()
