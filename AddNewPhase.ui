@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
-    <height>339</height>
+    <width>706</width>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPlainTextEdit" name="plainTextEditPhase">
@@ -20,7 +23,7 @@
       <x>20</x>
       <y>50</y>
       <width>231</width>
-      <height>101</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -32,10 +35,10 @@
    <widget class="QPlainTextEdit" name="plainTextEditMeaning">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>361</width>
-      <height>101</height>
+      <x>20</x>
+      <y>175</y>
+      <width>231</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -43,13 +46,19 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(160, 235, 255);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>16</y>
-      <width>231</width>
+      <width>51</width>
       <height>20</height>
      </rect>
     </property>
@@ -65,9 +74,9 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>15</y>
-      <width>361</width>
+      <x>20</x>
+      <y>140</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
@@ -83,10 +92,10 @@
    <widget class="QPushButton" name="pushButtonUpdate">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>180</y>
-      <width>221</width>
-      <height>61</height>
+      <x>90</x>
+      <y>320</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -105,17 +114,47 @@
      <rect>
       <x>30</x>
       <y>269</y>
-      <width>611</width>
+      <width>221</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>8</pointsize>
      </font>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonLoad">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>320</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidgetData">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>10</y>
+      <width>401</width>
+      <height>291</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -124,7 +163,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>676</width>
+     <width>706</width>
      <height>21</height>
     </rect>
    </property>

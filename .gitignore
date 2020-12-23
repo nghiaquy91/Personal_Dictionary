@@ -1,5 +1,6 @@
 #pyCharm
 .idea/
+Docs/
 __pycache__/
 venv/
 AddNewPhase.ui.ui
